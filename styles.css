@@ -17,8 +17,8 @@
     --fs-300: 0.5rem;
     --fs-400: 1rem;
     --fs-500: 1.5rem;
-    --fs-600: 2rem;
-    --fs-700: 2.5rem;
+    --fs-600: 1.8rem;
+    --fs-700: 2.2rem;
 
     --fs-body: var(--fs-400);
     --fs-primary-heading: var(--fs-700);
@@ -40,29 +40,49 @@
 .container {
     /* DISPLAY STUFF */
     display: grid;
-    grid-template: 1fr 5fr / 1fr 5fr;
+    grid-template: 1fr 5fr / 317px 5fr;
 }
 
 /* SIDEBAR */
 
 .sidebar {
     /* DISPLAY STUFF */
-    grid-row: 1 / -1; /* first track to last track */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-row: 1 / -1;
     /* BOX-MODEL STUFF */
+    padding: 1rem 2rem;
 }
 
-a {
-    text-decoration: none;
+.sidebar-item:not(:first-child) {
+    margin-top: 1rem;
+
 }
 
-a.sidebar-icon {
-    grid-column: 1 / 2;
+.sidebar-item:nth-child(2),
+.sidebar-item:nth-child(8) {
+    margin-top: 4rem;
 }
 
 a.sidebar-label {
-    grid-column: 2 / 3;
+    /* TEST STUFF */
+    text-decoration: none;
+}
+
+a.sidebar-label img {
+    /* DISPLAY STUFF */
+    display: inline-block;
+    /* BOX-MODEL STUFF */
+    max-width: 2rem;
+    position: relative;
+    top: .3rem;
+    margin-left: 1;
+    margin-right: 1.5rem;
+}
+
+a.sidebar-label img[src="images/view-dashboard.svg"] {
+    max-width: 3rem;
+    top: .7rem;
+    margin-left: -.5rem;
+    margin-right: 1rem;
 }
 
 
