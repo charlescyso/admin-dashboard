@@ -172,9 +172,10 @@ button.share-button {
     /* BOX-MODEL STUFF */
     max-width: 9rem;
     border-radius: 100vh;
-    padding: .5rem;
-    cursor: pointer;
     border: none;
+    padding: .5rem;
+    /* MANIPULATION STUFF */
+    cursor: pointer;
 }
 
 
@@ -185,6 +186,7 @@ button.share-button {
     display: grid;
     grid-template-columns: 3fr 1fr;
     /* BOX-MODEL STUFF */
+    padding-top: 1rem;
 }
 
 .main-left {
@@ -192,6 +194,7 @@ button.share-button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2rem auto auto auto;
+    /* BOX-MODEL STUFF */
     padding: 1rem;
     gap: 1rem 1rem;
 }
@@ -205,10 +208,11 @@ p.your-projects {
     /* DISPLAY STUFF */
     display: grid;
     grid-template-columns: 2fr 2rem 2rem;
-    border-left: 0.5rem solid var(--clr-accent-500);
     gap: 1rem 2rem;
+    /* BORDER-BOX STUFF */
+    border-left: 0.5rem solid var(--clr-accent-500);
     padding: 2rem 1rem;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
 }
 
 .text-container {
@@ -217,28 +221,55 @@ p.your-projects {
 }
 
 .project-card-icon {
-    width: 2rem;
+    /* DISPLAY STUFF */
     align-self: end;
+    /* BOX-MODEL STUFF */
+    width: 2rem;
 }
 
 .project-card-icon:nth-of-type(1) {
+    /* DISPLAY STUFF */
     justify-self: end;
 }
 
 .main-right {
     /* DISPLAY STUFF */
     display: grid;
-    grid-template-rows: auto 1fr auto 1fr;
+    grid-template-rows: 2rem;
+    gap: 1rem 1rem;
+    /* BOX-MODEL STUFF */
+    padding: 1rem;
+}
+
+.announcements-card,
+.trending-card {
+    /* DISPLAY STUFF */
+
+    /* BORDER-BOX STUFF */
+    border-radius: 0.5rem;
+    padding: 2rem 24px;
+
+}
+
+.text-container2:not(:first-of-type) {
+    margin-top: 1rem;
+}
+
+.trending {
+    margin-top: 1rem;
 }
 
 .trending-card {
     /* DISPLAY STUFF */
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: center;
 }
 
-
-
+.trending-card img[class$="-icon"] {
+    width: 5rem;
+}
 
 /* UTILITY CLASSES */
 
